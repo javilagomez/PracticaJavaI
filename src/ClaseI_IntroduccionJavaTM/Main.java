@@ -1,4 +1,4 @@
-package Ejercicios;
+package ClaseI_IntroduccionJavaTM;
 
 import java.util.Scanner;
 
@@ -86,26 +86,27 @@ public class Main {
         System.out.print("Ingresar la cantidad m que se repite el dígito d: ");
         int m = scan.nextInt();
         System.out.print("Ingresar el d dígito: ");
-        int d = scan.nextInt();
+        int d = scan.next().charAt(0);
         System.out.print("Ingresar la cantidad n de números: ");
         int n = scan.nextInt();
 
         int contador = 0;
-        int countCadena = 0;
-        int numeros = 3;
-        //while(contador<n){
-            String numCadena = String.valueOf(numeros);
-            for (int i = 0; i < numCadena.length(); i++) {
-                if(numCadena.charAt(i) == d){
-                    countCadena++;
+        int countNum = 0;
+        int numero = 0;
+        while (countNum < n){
+            String numString = String.valueOf(numero);
+            for (int i = 0; i < numString.length(); i++) {
+                if (numString.charAt(i) == d){
                     contador++;
-                    System.out.println(countCadena+" "+contador);
                 }
-                /*if(countCadena >= m){
-                    System.out.println(i);
-                }*/
+                if (contador >= m) {
+                    System.out.print(numero+" ");
+                    contador = 0;
+                    countNum++;
+                }
             }
-            numeros++;
-        //}
+            contador = 0;
+            numero++;
+        }
     }
 }
