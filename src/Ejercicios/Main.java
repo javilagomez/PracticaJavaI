@@ -26,6 +26,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        // QUITA LOS COMENTARIOS DE ALGÚN EJERCICIO Y MIRA LA MAGIA!
+
         // EJERCICOI 1
         /*System.out.print("Ingresa un número: ");
         int n = scan.nextInt();
