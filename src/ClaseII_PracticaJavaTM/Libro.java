@@ -1,4 +1,4 @@
-package PracticaJavaTM;
+package ClaseII_PracticaJavaTM;
 
 public class Libro {
     private String titulo;
