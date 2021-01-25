@@ -5,45 +5,44 @@ import java.util.List;
 
 public class Main {
     // Paso 1
-    /*public static void arrayString(int iArr[]){
+    public static String[] arrayString(int iArr[]){
         String sArr[] = new String[iArr.length];
         for (int i = 0; i < iArr.length; i++) {
             sArr[i] = String.valueOf(iArr[i]);
         }
-    }*/
+        return sArr;
+    }
 
     // Paso 2
-    /*public static String ceroString(String sArr[]){
-
-    }*/
-
-    public static void main(String[] args) {
-        int iArr[] = {4,24,28,132,3,61,5};
-
-        // PASO 1
-        String sArr[] = new String[iArr.length];
-        for (int i = 0; i < iArr.length; i++) {
-            sArr[i] = String.valueOf(iArr[i]);
-        }
-
-        // PASO 2
+    public static String[] ceroString(String sArr[]){
         int numMayor = 0;
-        for (int i = 0; i < iArr.length; i++) {
-            if(iArr[i]>numMayor){
-                numMayor = iArr[i];
+        for (int i = 0; i < sArr.length; i++) {
+            if(Integer.valueOf(sArr[i])>numMayor){
+                numMayor = Integer.valueOf(sArr[i]);
             }
         }
         int cifraMayor = String.valueOf(numMayor).length();
         String ceros = "";
 
-        String sArrCeros[] = new String[iArr.length];
-        for (int i = 0; i < (iArr.length); i++) {
+        String sArrCeros[] = new String[sArr.length];
+        for (int i = 0; i < (sArr.length); i++) {
             for (int j = 0; j < (cifraMayor - sArr[i].length()); j++) {
                 ceros = ceros+'0';
             }
             sArrCeros[i] = ceros+sArr[i];
             ceros = "";
         }
+        return sArrCeros;
+    }
+
+    public static void main(String[] args) {
+        int iArr[] = {4,24,28,132,3,61,5};
+
+        // PASO 1
+        String sArr[] = arrayString(iArr);
+
+        // PASO 2
+        String sArrCeros[] = ceroString(sArr);
 
         // PASO 3
         List<List<String>> cubeta = new ArrayList<List<String>>();
@@ -56,7 +55,7 @@ public class Main {
         char clave[] = {'0','1','2','3','4','5','6','7','8','9'};
         char indice[] = new char[sArrCeros.length];
 
-        while (conteo < cifraMayor){
+        while (conteo < 3){
             for (int i = 0; i < 10; i++) {
                 cubeta.add(new ArrayList<String>());
             }

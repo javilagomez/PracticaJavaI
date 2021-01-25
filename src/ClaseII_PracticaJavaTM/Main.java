@@ -12,10 +12,10 @@ public class Main {
         contar.decremento();
         System.out.println(contar.getContador());*/
 
-        /*Libro ejemplar = new Libro("Java a Fondo", "Pablo", 123L);
-        System.out.println(ejemplar);*/
+        Libro ejemplar = new Libro("Java a Fondo", "Pablo", 123L);
+        System.out.println(ejemplar);
 
-        Fecha fecha = new Fecha(2020,10,10);
-        System.out.println(fecha.getYear());
+        /*Fecha fecha = new Fecha(2020,10,10);
+        System.out.println(fecha.getYear());*/
     }
 }
