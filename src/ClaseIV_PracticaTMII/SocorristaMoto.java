@@ -6,6 +6,6 @@ public class SocorristaMoto extends Motos{
     }
 
     public void socorrerMoto(Motos moto){
-        System.out.println("Socorriendo moto"+moto.getPatente());
+        System.out.println("Socorriendo moto:   "+moto.getPatente());
     }
 }

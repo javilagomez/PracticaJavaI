@@ -7,6 +7,6 @@ public class SocorristaAuto extends Autos{
     }
 
     public void socorrerauto(Autos auto){
-        System.out.println("Socorriendo auto"+auto.getPatente());
+        System.out.println("Socorriendo auto:   "+auto.getPatente());
     }
 }
